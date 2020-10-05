@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imageView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+
+    <SeekBar
+        android:id="@+id/timerSeekBar"
+        android:layout_width="410dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="4dp"
+        android:background="#3F51B5"
+        android:fadeScrollbars="?android:attr/windowSwipeToDismiss"
+        android:fadingEdge="horizontal|vertical"
+        android:soundEffectsEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="kitkat_watch" />
+
+    <ImageView
+        android:id="@+id/eggImageView"
+        android:layout_width="437dp"
+        android:layout_height="691dp"
+        android:layout_marginTop="172dp"
+        android:adjustViewBounds="true"
+        android:background="#020202"
+        android:cropToPadding="true"
+        android:fitsSystemWindows="false"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerSeekBar"
+        app:srcCompat="@drawable/egg2" />
+
+    <TextView
+        android:id="@+id/countdownTextView"
+        android:layout_width="108dp"
+        android:layout_height="30dp"
+        android:text="00:00:30"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/eggImageView"
+        app:layout_constraintEnd_toStartOf="@+id/eggImageView"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toEndOf="@+id/eggImageView"
+        app:layout_constraintTop_toBottomOf="@+id/eggImageView"
+        app:layout_constraintVertical_bias="0.457"
+        tools:text="00:00:30" />
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="190dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="500dp"
+        android:layout_marginRight="500dp"
+        android:layout_marginBottom="1009dp"
+        android:background="@drawable/shape"
+        android:onClick="buttonClicked"
+        android:text="START"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/eggImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintStart_toEndOf="@+id/eggImageView"
+        app:layout_constraintTop_toBottomOf="@+id/countdownTextView"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <ImageView
+        android:id="@+id/birdImageView"
+        android:layout_width="395dp"
+        android:layout_height="341dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="332dp"
+        android:layout_marginRight="332dp"
+        android:layout_marginBottom="360dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintStart_toEndOf="@+id/eggImageView"
+        app:layout_constraintTop_toBottomOf="@+id/eggImageView"
+        app:layout_constraintVertical_bias="0.997"
+        app:srcCompat="@drawable/bird" />
+
+    <Button
+        android:id="@+id/goButton1"
+        android:layout_width="200dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="-500dp"
+        android:layout_marginLeft="-500dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginRight="240dp"
+        android:layout_marginBottom="213dp"
+        android:background="@drawable/shape1"
+        android:onClick="buttonClicked1"
+        android:text="RESET"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eggImageView"
+        app:layout_constraintTop_toBottomOf="@+id/eggImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
